@@ -9,7 +9,7 @@ import girl_coding from "../../public/images/avatar.svg";
 interface HomeProps {
   product: {
     priceId: string;
-    amount: number;
+    amount: string;
     recurringInterval: string;
   };
 }
@@ -32,10 +32,10 @@ export default function Home({ product }: HomeProps) {
               for {product.amount}/{product.recurringInterval}
             </span>
           </p>
-          <SubscribeButton priceId={product.priceId} />
+          <SubscribeButton />
         </section>
 
-        <Image src={girl_coding} alt="Girl coding" />
+        <Image src={girl_coding} alt="Girl coding" height={521} width={336} />
       </main>
     </>
   );

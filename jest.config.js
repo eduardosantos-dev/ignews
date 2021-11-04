@@ -12,4 +12,12 @@ module.exports = {
     "^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$":
       "<rootDir>/__mocks__/fileMock.js",
   },
+  collectCoverage: true,
+  collectCoverageFrom: [
+    "src/**/*.tsx",
+    "!src/**/*.spec.tsx",
+    "!src/**/_app.tsx",
+    "!src/**/_document.tsx",
+  ],
+  coverageReporters: ["lcov", "json"],
 };
